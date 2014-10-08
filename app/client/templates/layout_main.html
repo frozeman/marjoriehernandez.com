@@ -1,0 +1,44 @@
+<template name="layout_main">
+    
+    <div class="container">
+        <header class="main">
+            <a href="{{pathFor 'home'}}" class="logo"><img src="/images/name-white-01.png" alt="logo"></a>
+            <canvas id="canvas"></canvas>
+        </header>
+
+        <a href="{{pathFor 'about'}}" class="box" style="background-image: url('/images/about.png');">
+            <div class="ratio"></div>
+            <span>about</span>
+        </a>
+        <a href="{{pathFor 'cv'}}" class="box" style="background-image: url('/images/cv3.jpg');">
+            <div class="ratio"></div>
+            <span>curriculum vitae</span>
+        </a>
+        <a href="{{pathFor 'contact'}}" class="box" style="background-image: url('/images/contact2.jpg');">
+            <div class="ratio"></div>
+            <span>contact</span>
+        </a>
+
+        {{> yield "row1"}}
+
+        <a href="{{pathFor 'architecture'}}" class="box" style="background-image: url('/images/architecture2.jpg');">
+            <div class="ratio"></div>
+            <span>architecture</span>
+        </a>
+        <a href="{{pathFor 'videos'}}" class="box" style="background-image: url('/images/videos3.jpg');">
+            <div class="ratio"></div>
+            <span>videos</span>
+        </a>
+        <a href="{{pathFor 'photography'}}" class="box" style="background-image: url('/images/photography2.jpg');">
+            <div class="ratio"></div>
+            <span>photography</span>
+        </a>
+
+        {{> yield "row2"}}
+
+        <div class="clear-fix"></div>
+    </div>
+
+</template>
+
+<template name="none"></template>

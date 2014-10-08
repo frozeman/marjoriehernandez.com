@@ -1,0 +1,18 @@
+.block-button, .block-button:visited {
+	.button-reset;
+	display: inline-block;
+	padding: @defaultPadding*2 @defaultPadding*4;
+	margin: @defaultMargin/2 0;
+	background-color: lighten(@colorBrand1, 40%);
+	color: @colorWhite;
+	font-weight: 300;
+
+	&:hover,
+	&:focus {
+		background-color: lighten(@colorBrand1, 10%);
+		color: @colorWhite;
+	}
+	&:active {
+		.scale(0.98);
+	}
+}

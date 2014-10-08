@@ -1,0 +1,165 @@
+body {
+	padding: 0;
+	padding-bottom: @defaultPadding*6;
+	margin: 0;
+	background-color: #fff;
+	font: 16px solid 'Roboto', sans-serif;
+	color: @colorTextPrimary;
+}
+// html, body {
+// 	height: 100%;
+// }
+#form-helper-iframe {
+	display: none;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1024px;
+}
+
+header.main {
+	position: relative;
+	text-align: center;
+	height: 200px;
+
+	a {
+		display: block;
+		position: relative;
+		top: 50px;
+		z-index: 2;
+		font-size: 2.5em;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+
+		color: #fff;
+
+		img {
+			position: relative;
+			z-index: 2;
+			width: 60%;
+		}
+	}
+
+	canvas {
+		display: block;
+		z-index: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+}
+
+// MENU
+a.box {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 32%;
+	background-color: @colorGray;
+	margin: 0 0 1% 1%;
+	color: @colorTextPrimary;
+	.shadow;
+
+	background-position: center;
+	.background-size(cover);
+
+	div.ratio {
+		padding-top: 100%;
+	}
+
+	span {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: @defaultPadding*2 @defaultPadding;
+		text-align: center;
+		font-size: 1.0em;
+		font-weight: 300;
+	}
+}
+
+
+// CONTENT
+main.content {
+	padding: @defaultPadding;
+	clear: both;
+
+	h1, p {
+		margin: @defaultMargin*6; 
+	}
+	h1 {
+		margin-bottom: @defaultMargin*3;
+	}
+	p {
+		margin-top: @defaultMargin*3;
+		color: @colorTextSecondary;
+	}
+
+
+	.iosslider {
+		height: 580px;
+	}
+	.slide {
+		background-position: center;
+		.background-size(cover);
+		text-align: center;
+
+		iframe {
+			margin-top: 3%;
+		}
+	}
+}
+
+// ABOUT
+main.about {
+	h1 {
+		margin-top: @defaultMargin*8;
+	}
+
+
+	img.avatar {
+		width: 200px;
+		float: left;
+		margin: @defaultMargin*6;
+	}
+}
+
+// CONTACT
+main.contact {
+	text-align: center;
+
+	h1 {
+		margin-top: @defaultMargin*8;
+	}
+}
+
+// CV
+main.cv {
+	p {
+		width: 55%;
+		float: left;
+
+
+		&:nth-child(1) {
+			margin-bottom: @defaultMargin;
+		}
+		&:nth-child(2) {
+			margin-top: @defaultMargin;
+		}
+	}
+
+	.block-button {
+		position: relative;
+		margin-top: 6%;
+		margin-left: @defaultMargin*4;
+	}
+}

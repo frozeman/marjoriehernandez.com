@@ -1,0 +1,138 @@
+.desktop-app {
+	a, a:visited, button {
+		cursor: default;
+	}
+}
+
+
+
+button {
+	.button-reset;
+	// -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	&:active {
+		.scale(0.95);
+	}
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: @colorBrand1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	
+	&:hover,
+	&:focus {
+		color: @colorBrand2;
+	}
+}
+
+
+p {
+	font-weight: 200;
+}
+
+
+h1, h2, h3 {
+	display: block;
+	text-align: left;
+	font-weight: 300;
+	margin: @defaultPadding/2 0;
+}
+h1 {
+	font-size: 2.5em;
+}
+h2 {
+	font-size: 1.5em;
+	color: @colorTextSecondary;
+}
+h3 {
+	font-size: 1.1em;
+	color: @colorTextSecondary;
+}
+
+ul {
+	padding-left: @defaultMargin;
+	list-style: circle;
+
+	li {
+		margin: @defaultMargin 0;
+		font-weight: 300;
+	}
+}
+
+// forms
+input, select {
+	padding: @defaultPadding/2 @defaultPadding/1.5;
+	border: 1px solid @colorGray;
+	font-size: 1.3em;
+	font-weight: 300;
+
+	&:focus {
+		outline: none;
+		border-color: @colorBrand1;
+	}
+}
+select {
+	height: 45px;
+}
+
+
+
+// SLIDER
+.iosslider {
+    @sizeIcons: 16px;
+    width: 100%;
+    height: 590px;
+    clear: both;
+    overflow: hidden;
+
+
+    button {
+        .button-reset;
+        @sizeIconsDouble: @sizeIcons *2;
+        z-index: 3;
+        position: absolute;
+        top: 49%;
+        margin-top: -@sizeIconsDouble / 2;
+        font-size: @sizeIconsDouble;
+        color: @colorTextPrimary;
+
+        &:hover,
+        &:focus {
+            color: @colorBrand1;
+        }
+        &:active {
+            .scale(0.95);
+        }
+    }
+
+    .slide-controls {
+        z-index: 3;
+        .horizontal-menu;
+        position: absolute;
+        bottom: 26px;
+        width: 100%;
+        margin-left: -6px;
+        text-align: center;
+
+        li {
+            float: none;
+            margin: 0 @defaultMargin;
+
+            button {
+                .button-reset;
+                width: 10px;
+                height: 10px;
+                padding: 0;
+                margin: 0;
+                .border-radius(5px);
+                background-color: fadeout(@colorBlack, 80%);
+
+                &.active {
+                    background-color: fadeout(@colorBlack, 30%);
+                }
+            }
+
+        }
+    }
+}
